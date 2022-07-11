@@ -243,29 +243,17 @@ namespace JCS
         [Description("Gets or sets whether the user can change the value of the button or not")]
         public bool AllowUserChange
         {
-            get { return _allowUserChange; }
-            set { _allowUserChange = value; }
+            get => _allowUserChange;
+            set => _allowUserChange = value;
         }
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public string CheckedString
-        {
-            get
-            {
-                return Checked ? (string.IsNullOrEmpty(OnText) ? "ON" : OnText) : (string.IsNullOrEmpty(OffText) ? "OFF" : OffText);
-            }
-        }
+        public string CheckedString => Checked ? (string.IsNullOrEmpty(OnText) ? "ON" : OnText) : (string.IsNullOrEmpty(OffText) ? "OFF" : OffText);
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public Rectangle ButtonRectangle
-        {
-            get
-            {
-                return _renderer.GetButtonRectangle();
-            }
-        }
+        public Rectangle ButtonRectangle => _renderer.GetButtonRectangle();
 
         [Bindable(false)]
         [DefaultValue(true)]
@@ -273,7 +261,7 @@ namespace JCS
         [Description("Gets or sets if the ToggleSwitch should be grayed out when disabled")]
         public bool GrayWhenDisabled
         {
-            get { return _grayWhenDisabled; }
+            get => _grayWhenDisabled;
             set
             {
                 if (value != _grayWhenDisabled)
@@ -292,8 +280,8 @@ namespace JCS
         [Description("Gets or sets if the ToggleSwitch should toggle when the button is clicked")]
         public bool ToggleOnButtonClick
         {
-            get { return _toggleOnButtonClick; }
-            set { _toggleOnButtonClick = value; }
+            get => _toggleOnButtonClick;
+            set => _toggleOnButtonClick = value;
         }
 
         [Bindable(false)]
@@ -302,8 +290,8 @@ namespace JCS
         [Description("Gets or sets if the ToggleSwitch should toggle when the track besides the button is clicked")]
         public bool ToggleOnSideClick
         {
-            get { return _toggleOnSideClick; }
-            set { _toggleOnSideClick = value; }
+            get => _toggleOnSideClick;
+            set => _toggleOnSideClick = value;
         }
 
         [Bindable(false)]
@@ -312,8 +300,8 @@ namespace JCS
         [Description("Gets or sets how much the button need to be on the other side (in peercept) before it snaps")]
         public int ThresholdPercentage
         {
-            get { return _thresholdPercentage; }
-            set { _thresholdPercentage = value; }
+            get => _thresholdPercentage;
+            set => _thresholdPercentage = value;
         }
 
         [Bindable(false)]
@@ -322,7 +310,7 @@ namespace JCS
         [Description("Gets or sets the forecolor of the text when Checked=false")]
         public Color OffForeColor
         {
-            get { return _offForeColor; }
+            get => _offForeColor;
             set
             {
                 if (value != _offForeColor)
@@ -339,7 +327,7 @@ namespace JCS
         [Description("Gets or sets the font of the text when Checked=false")]
         public Font OffFont
         {
-            get { return _offFont; }
+            get => _offFont;
             set
             {
                 if (!value.Equals(_offFont))
@@ -356,7 +344,7 @@ namespace JCS
         [Description("Gets or sets the text when Checked=true")]
         public string OffText
         {
-            get { return _offText; }
+            get => _offText;
             set
             {
                 if (value != _offText)
@@ -373,7 +361,7 @@ namespace JCS
         [Description("Gets or sets the side image when Checked=false - Note: Settings the OffSideImage overrules the OffText property. Only the image will be shown")]
         public Image OffSideImage
         {
-            get { return _offSideImage; }
+            get => _offSideImage;
             set
             {
                 if (value != _offSideImage)
@@ -390,7 +378,7 @@ namespace JCS
         [Description("Gets or sets whether the side image visible when Checked=false should be scaled to fit")]
         public bool OffSideScaleImageToFit
         {
-            get { return _offSideScaleImage; }
+            get => _offSideScaleImage;
             set
             {
                 if (value != _offSideScaleImage)
@@ -407,7 +395,7 @@ namespace JCS
         [Description("Gets or sets how the text or side image visible when Checked=false should be aligned")]
         public ToggleSwitchAlignment OffSideAlignment
         {
-            get { return _offSideAlignment; }
+            get => _offSideAlignment;
             set
             {
                 if (value != _offSideAlignment)
@@ -424,7 +412,7 @@ namespace JCS
         [Description("Gets or sets the button image when Checked=false and ButtonImage is not set")]
         public Image OffButtonImage
         {
-            get { return _offButtonImage; }
+            get => _offButtonImage;
             set
             {
                 if (value != _offButtonImage)
@@ -441,7 +429,7 @@ namespace JCS
         [Description("Gets or sets whether the button image visible when Checked=false should be scaled to fit")]
         public bool OffButtonScaleImageToFit
         {
-            get { return _offButtonScaleImage; }
+            get => _offButtonScaleImage;
             set
             {
                 if (value != _offButtonScaleImage)
@@ -458,7 +446,7 @@ namespace JCS
         [Description("Gets or sets how the button image visible when Checked=false should be aligned")]
         public ToggleSwitchButtonAlignment OffButtonAlignment
         {
-            get { return _offButtonAlignment; }
+            get => _offButtonAlignment;
             set
             {
                 if (value != _offButtonAlignment)
@@ -475,7 +463,7 @@ namespace JCS
         [Description("Gets or sets the forecolor of the text when Checked=true")]
         public Color OnForeColor
         {
-            get { return _onForeColor; }
+            get => _onForeColor;
             set
             {
                 if (value != _onForeColor)
@@ -492,7 +480,7 @@ namespace JCS
         [Description("Gets or sets the font of the text when Checked=true")]
         public Font OnFont
         {
-            get { return _onFont; }
+            get => _onFont;
             set
             {
                 if (!value.Equals(_onFont))
@@ -509,7 +497,7 @@ namespace JCS
         [Description("Gets or sets the text when Checked=true")]
         public string OnText
         {
-            get { return _onText; }
+            get => _onText;
             set
             {
                 if (value != _onText)
@@ -526,7 +514,7 @@ namespace JCS
         [Description("Gets or sets the side image visible when Checked=true - Note: Settings the OnSideImage overrules the OnText property. Only the image will be shown.")]
         public Image OnSideImage
         {
-            get { return _onSideImage; }
+            get => _onSideImage;
             set
             {
                 if (value != _onSideImage)
@@ -543,7 +531,7 @@ namespace JCS
         [Description("Gets or sets whether the side image visible when Checked=true should be scaled to fit")]
         public bool OnSideScaleImageToFit
         {
-            get { return _onSideScaleImage; }
+            get => _onSideScaleImage;
             set
             {
                 if (value != _onSideScaleImage)
@@ -560,7 +548,7 @@ namespace JCS
         [Description("Gets or sets the button image")]
         public Image ButtonImage
         {
-            get { return _buttonImage; }
+            get => _buttonImage;
             set
             {
                 if (value != _buttonImage)
@@ -577,7 +565,7 @@ namespace JCS
         [Description("Gets or sets whether the button image should be scaled to fit")]
         public bool ButtonScaleImageToFit
         {
-            get { return _buttonScaleImage; }
+            get => _buttonScaleImage;
             set
             {
                 if (value != _buttonScaleImage)
@@ -594,7 +582,7 @@ namespace JCS
         [Description("Gets or sets how the button image should be aligned")]
         public ToggleSwitchButtonAlignment ButtonAlignment
         {
-            get { return _buttonAlignment; }
+            get => _buttonAlignment;
             set
             {
                 if (value != _buttonAlignment)
@@ -611,7 +599,7 @@ namespace JCS
         [Description("Gets or sets how the text or side image visible when Checked=true should be aligned")]
         public ToggleSwitchAlignment OnSideAlignment
         {
-            get { return _onSideAlignment; }
+            get => _onSideAlignment;
             set
             {
                 if (value != _onSideAlignment)
@@ -628,7 +616,7 @@ namespace JCS
         [Description("Gets or sets the button image visible when Checked=true and ButtonImage is not set")]
         public Image OnButtonImage
         {
-            get { return _onButtonImage; }
+            get => _onButtonImage;
             set
             {
                 if (value != _onButtonImage)
@@ -645,7 +633,7 @@ namespace JCS
         [Description("Gets or sets whether the button image visible when Checked=true should be scaled to fit")]
         public bool OnButtonScaleImageToFit
         {
-            get { return _onButtonScaleImage; }
+            get => _onButtonScaleImage;
             set
             {
                 if (value != _onButtonScaleImage)
@@ -662,7 +650,7 @@ namespace JCS
         [Description("Gets or sets how the button image visible when Checked=true should be aligned")]
         public ToggleSwitchButtonAlignment OnButtonAlignment
         {
-            get { return _onButtonAlignment; }
+            get => _onButtonAlignment;
             set
             {
                 if (value != _onButtonAlignment)
@@ -679,8 +667,8 @@ namespace JCS
         [Description("Gets or sets whether the toggle change should be animated or not")]
         public bool UseAnimation
         {
-            get { return _useAnimation; }
-            set { _useAnimation = value; }
+            get => _useAnimation;
+            set => _useAnimation = value;
         }
 
         [Bindable(false)]
@@ -689,12 +677,12 @@ namespace JCS
         [Description("Gets or sets the interval in ms between animation frames")]
         public int AnimationInterval
         {
-            get { return _animationInterval; }
+            get => _animationInterval;
             set
             {
                 if (value <= 0)
                 {
-                    throw new ArgumentOutOfRangeException("AnimationInterval must larger than zero!");
+                    throw new ArgumentOutOfRangeException(nameof(AnimationInterval) + " must larger than zero!");
                 }
 
                 _animationInterval = value;
@@ -707,12 +695,12 @@ namespace JCS
         [Description("Gets or sets the step in pixes the button shouldbe moved between each animation interval")]
         public int AnimationStep
         {
-            get { return _animationStep; }
+            get => _animationStep;
             set
             {
                 if (value <= 0)
                 {
-                    throw new ArgumentOutOfRangeException("AnimationStep must larger than zero!");
+                    throw new ArgumentOutOfRangeException(nameof(AnimationStep) + " must larger than zero!");
                 }
 
                 _animationStep = value;
@@ -725,24 +713,24 @@ namespace JCS
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new string Text
         {
-            get { return ""; }
-            set { base.Text = ""; }
+            get => "";
+            set => base.Text = "";
         }
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new Color ForeColor
         {
-            get { return Color.Black; }
-            set { base.ForeColor = Color.Black; }
+            get => Color.Black;
+            set => base.ForeColor = Color.Black;
         }
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public new Font Font
         {
-            get { return base.Font; }
-            set { base.Font = new Font(base.Font, FontStyle.Regular); }
+            get => base.Font;
+            set => base.Font = new Font(base.Font, FontStyle.Regular);
         }
 
         #endregion Hidden Base Properties
@@ -753,45 +741,27 @@ namespace JCS
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        internal bool IsButtonHovered
-        {
-            get { return _isButtonHovered && !_isButtonPressed; }
-        }
+        internal bool IsButtonHovered => _isButtonHovered && !_isButtonPressed;
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        internal bool IsButtonPressed
-        {
-            get { return _isButtonPressed; }
-        }
+        internal bool IsButtonPressed => _isButtonPressed;
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        internal bool IsLeftSideHovered
-        {
-            get { return _isLeftFieldHovered && !_isLeftFieldPressed; }
-        }
+        internal bool IsLeftSideHovered => _isLeftFieldHovered && !_isLeftFieldPressed;
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        internal bool IsLeftSidePressed
-        {
-            get { return _isLeftFieldPressed; }
-        }
+        internal bool IsLeftSidePressed => _isLeftFieldPressed;
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        internal bool IsRightSideHovered
-        {
-            get { return _isRightFieldHovered && !_isRightFieldPressed; }
-        }
+        internal bool IsRightSideHovered => _isRightFieldHovered && !_isRightFieldPressed;
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        internal bool IsRightSidePressed
-        {
-            get { return _isRightFieldPressed; }
-        }
+        internal bool IsRightSidePressed => _isRightFieldPressed;
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -818,47 +788,29 @@ namespace JCS
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        internal bool IsButtonOnLeftSide
-        {
-            get { return (ButtonValue <= 0); }
-        }
+        internal bool IsButtonOnLeftSide => (ButtonValue <= 0);
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        internal bool IsButtonOnRightSide
-        {
-            get { return (ButtonValue >= (Width - _renderer.GetButtonWidth())); }
-        }
+        internal bool IsButtonOnRightSide => (ButtonValue >= (Width - _renderer.GetButtonWidth()));
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        internal bool IsButtonMovingLeft
-        {
-            get { return (_animating && !IsButtonOnLeftSide && _animationResult == false); }
-        }
+        internal bool IsButtonMovingLeft => (_animating && !IsButtonOnLeftSide && _animationResult == false);
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        internal bool IsButtonMovingRight
-        {
-            get { return (_animating && !IsButtonOnRightSide && _animationResult == true); }
-        }
+        internal bool IsButtonMovingRight => (_animating && !IsButtonOnRightSide && _animationResult == true);
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        internal bool AnimationResult
-        {
-            get { return _animationResult; }
-        }
+        internal bool AnimationResult => _animationResult;
 
         #endregion Private Properties
 
         #region Overridden Control Methods
 
-        protected override Size DefaultSize
-        {
-            get { return new Size(50, 19); }
-        }
+        protected override Size DefaultSize => new Size(50, 19);
 
         protected override void OnPaintBackground(PaintEventArgs pevent)
         {
